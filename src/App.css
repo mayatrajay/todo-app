@@ -1,0 +1,225 @@
+/* Import the global CSS styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: #444;
+}
+
+input[type='text'] {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  margin-right: 1rem;
+  width: 70%;
+  color: #444;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+li button {
+  margin-left: 1rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+li button:hover {
+  background-color: #d32f2f;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+background-color: #dc3545;
+color: white;
+border: none;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+transition: all 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+background-color: #c82333;
+}
+
+input[type='text'].edit {
+width: 80%;
+border: none;
+border-bottom: 2px solid #ddd;
+margin-right: 1rem;
+font-size: 1.2rem;
+color: #444;
+}
+
+input[type='text'].edit:focus {
+outline: none;
+}
+
+.checkbox {
+margin-right: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+.App {
+padding: 10px;
+}
+
+h1 {
+font-size: 2rem;
+}
+
+input[type='text'] {
+width: 60%;
+}
+
+button {
+font-size: 1rem;
+}
+
+li {
+font-size: 1rem;
+}
+
+.task-container {
+max-height: 70px;
+}
+}
+
+@media only screen and (max-width: 400px) {
+input[type='text'] {
+width: 50%;
+}
+
+li {
+font-size: 0.9rem;
+}
+
+.task-container {
+max-height: 60px;
+}
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.todo-item .task {
+  flex-grow: 1;
+  word-break: break-word;
+  margin-right: 10px;
+}
+
+.todo-item .actions {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item button {
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
